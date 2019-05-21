@@ -1,0 +1,101 @@
+{
+  "pageTitle": "Анкета",
+  "blocks": [
+    {
+      "name": "form",
+      "params": {
+        "method": "post",
+        "groups": [
+          {
+            "name": "form-group",
+            "params": {
+              "heading": "Паспортные данные",
+              "headingHidden": true,
+              "fieldGroups": [
+                {
+                  "name": "field-group",
+                  "params": {
+                    "label": "Полное ФИО",
+                    "field": {
+                      "name": "field",
+                      "params": {
+                        "type": "text",
+                        "name": "name",
+                        "placeholder": "Иванов Иван Иванович"
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "field-group",
+                  "params": {
+                    "label": "Год рождения",
+                    "field": {
+                      "name": "field",
+                      "params": {
+                        "type": "number",
+                        "name": "birthdate",
+                        "placeholder": "1990"
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "field-group",
+                  "params": {
+                    "label": "Место жительства",
+                    "field": {
+                      "name": "field",
+                      "params": {
+                        "type": "text",
+                        "name": "location",
+                        "placeholder": "г. Иваново, Россия"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "form-group",
+            "params": {
+              "heading": "Контакты",
+              "headingHidden": true,
+              "fieldGroups": [
+                {
+                  "name": "field-group",
+                  "params": {
+                    "label": "Скайп",
+                    "field": {
+                      "name": "field",
+                      "params": {
+                        "type": "text",
+                        "name": "skype",
+                        "placeholder": "ivanov"
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "field-group",
+                  "params": {
+                    "label": "Почта",
+                    "field": {
+                      "name": "field",
+                      "params": {
+                        "type": "email",
+                        "name": "mail",
+                        "placeholder": "ivanov@gmail.com"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

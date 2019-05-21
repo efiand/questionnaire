@@ -1,0 +1,34 @@
+{
+  "siteName": "CSSSR",
+  "titleDelimiter": " | ",
+  "fonts": [
+    "ptsans",
+    "ptsans-bold"
+  ],
+  "header": {
+    "name": "header",
+    "params": {
+      "pictures": [
+        {
+          "mix": "header__logo",
+          "url": "https://csssr.com/ru",
+          "baseName": "logo-csssr",
+          "ext": "png",
+          "alt": "CSSSR"
+        },
+        {
+          "mix": "header__stamp",
+          "baseName": "stamp",
+          "ext": "png",
+          "alt": "Заполнено собственноручно"
+        }
+      ],
+      "heading": {
+        "mix": "header__heading",
+        "baseName": "blank-heading",
+        "ext": "png",
+        "alt": "Дело"
+      }
+    }
+  }
+}

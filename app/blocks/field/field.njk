@@ -1,0 +1,5 @@
+{% if params.type !== "textarea" %}
+  <input class="field {{ params.mix }}" type="{{ params.type }}" {{ fieldBase(params) }}>
+{% else %}
+  <textarea class="field field--message {{ params.mix }}" {{ fieldBase(params) }}></textarea>
+{% endif %}

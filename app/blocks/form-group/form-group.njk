@@ -1,0 +1,14 @@
+{% if params.field %}
+  <p class="form-group {{ params.mix }}">
+    <label class="&__title" for="{{ params.field.params.name }}">{{ params.heading }}</label>
+    {{ include(params.field) }}
+  </p>
+{% else %}
+  <fieldset class="form-group {{ params.mix }}">
+    <legend class="{{ "visually-hidden" if params.headingHidden else "&__title" }}">
+      {{ params.heading }}
+    </legend>
+
+    {{ includes(params.fieldGroups) }}
+  </fieldset>
+{% endif %}

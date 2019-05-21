@@ -1,0 +1,7 @@
+{% macro fieldBase(params) %}
+  id="{{ params.name }}"
+  name="{{ params.name }}"
+  placeholder="{{ params.placeholder }}"
+  {{ "requred" if params.required }}
+  {{ "disabled" if params.disabled }}
+{% endmacro %}

@@ -1,0 +1,38 @@
+@include font-face(PT Sans, 400, normal, ptsans, PT Sans, PTSans-Regular);
+@include font-face(PT Sans, 700, normal, ptsans-bold, PT Sans Bold, PTSans-Bold);
+
+html {
+  min-width: 320px;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  background-color: $color-back;
+}
+
+body {
+  max-width: 768px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 62px 116px;
+  background-position: 0 -10px;
+
+  @include background-image(background, jpg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-skip-ink: none;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition-property: color, opacity, background-color, border-color, box-shadow;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

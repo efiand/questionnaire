@@ -1,0 +1,27 @@
+{% extends source + "/templates/index.njk" %}
+
+{% block layout %}
+  <!DOCTYPE html>
+  <html lang="ru">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="HandheldFriendly" content="True">
+      <meta name="MobileOptimized" content="320">
+      <title>{{ siteName + titleDelimiter + pageTitle }}</title>
+      <link rel="stylesheet" href="css/style.min.css">
+
+      {% for font in fonts %}
+        <link rel="preload" href="fonts/{{ font }}.woff2" as="font">
+      {% endfor %}
+    </head>
+    <body class="blank">
+      {{ include(header) }}
+
+      <main>{{ includes(blocks) }}</main>
+
+      <script src="js/script.min.js"></script>
+    </body>
+  </html>
+{% endblock %}

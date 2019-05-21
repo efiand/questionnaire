@@ -1,0 +1,20 @@
+.header {
+  position: relative;
+}
+
+.header__logo {
+  display: block;
+  margin: 0 0 40px -4px;
+}
+
+.header__stamp {
+  position: absolute;
+  top: -14px;
+  right: -62px;
+}
+
+.header__heading {
+  display: table;
+  margin: 0 auto;
+  padding-right: 42px;
+}

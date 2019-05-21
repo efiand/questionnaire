@@ -1,0 +1,8 @@
+<header class="header">
+  {% for img in params.pictures %}
+    {{ picture(img) }}
+  {% endfor %}
+
+  <h1 class="visually-hidden">{{ pageTitle }}</h1>
+  {{ picture(params.heading) }}
+</header>
