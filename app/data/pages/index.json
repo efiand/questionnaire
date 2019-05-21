@@ -16,11 +16,14 @@
                   "name": "field-group",
                   "params": {
                     "label": "Полное ФИО",
+                    "mixLabel": "field-group__label--name",
                     "field": {
                       "name": "field",
                       "params": {
-                        "type": "text",
+                        "mix": "field--name field-group__field",
+                        "type": "text ",
                         "name": "name",
+                        "value": "Иванов Иван Иванович",
                         "placeholder": "Иванов Иван Иванович"
                       }
                     }
@@ -30,11 +33,14 @@
                   "name": "field-group",
                   "params": {
                     "label": "Год рождения",
+                    "mixLabel": "field-group__label--birthdate",
                     "field": {
                       "name": "field",
                       "params": {
+                        "mix": "field--birthdate field-group__field",
                         "type": "number",
                         "name": "birthdate",
+                        "value": "1990",
                         "placeholder": "1990"
                       }
                     }
@@ -47,8 +53,10 @@
                     "field": {
                       "name": "field",
                       "params": {
+                        "mix": "field--location field-group__field",
                         "type": "text",
                         "name": "location",
+                        "value": "г. Иваново, Россия",
                         "placeholder": "г. Иваново, Россия"
                       }
                     }

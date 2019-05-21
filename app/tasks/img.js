@@ -12,31 +12,33 @@ const {
   svgstore: svgstoreConfig
 } = require(`../../package.json`);
 
-const img = {
-  source: [`${source}/img/*.{jpg,png,svg}`],
-  sprite: `${source}/img/sprite/*.svg`,
-  build: `${build}/img`
-};
-if (!process.env.NODE_ENV) {
-  img.source.push(`${temp}/previews/**/*.jpg`);
-}
+const end = `${build}/img`;
 
 task(`img`, () => {
-  return src(img.source)
-    .pipe(changed(img.build))
+  return src(`${source}/img/*.{jpg,png,svg}`)
+    .pipe(changed(end))
     .pipe(imagemin([
       require(`imagemin-jpegoptim`)(jpegoptim),
       imagemin.optipng(),
       imagemin.svgo(svgo)
     ]))
-    .pipe(dest(img.build))
+    .pipe(dest(end))
     .pipe(webp(webpConfig))
-    .pipe(dest(img.build));
+    .pipe(dest(end));
+});
+
+task(`img:icons`, () => {
+  return src(`${source}/img/icons/*.{png,svg}`)
+    .pipe(imagemin([
+      imagemin.optipng(),
+      imagemin.svgo(svgo)
+    ]))
+    .pipe(dest(`${temp}/icons`));
 });
 
 task(`img:sprite`, () => {
-  return src(img.sprite)
+  return src(`${source}/img/sprite/*.svg`)
     .pipe(imagemin([imagemin.svgo(svgo)]))
     .pipe(svgstore(svgstoreConfig))
-    .pipe(dest(img.build));
+    .pipe(dest(end));
 });

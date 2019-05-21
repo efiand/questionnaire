@@ -2,6 +2,7 @@
 
 const { task, src, dest } = require(`gulp`);
 const {
+  cssBase64,
   if: gulpIf,
   plumber,
   sourcemaps,
@@ -10,7 +11,7 @@ const {
   postcss,
   rename
 } = require(`gulp-load-plugins`)();
-const { source, build } = require(`../../package.json`);
+const { source, build, base64 } = require(`../../package.json`);
 
 const isDev = !process.env.NODE_ENV;
 
@@ -24,6 +25,7 @@ task(`css`, () => {
       require(`autoprefixer`)(),
       require(`postcss-csso`)({ comments: false })
     ]))
+    .pipe(cssBase64(base64))
     .pipe(rename({ suffix: `.min` }))
     .pipe(gulpIf(isDev, sourcemaps.write(``)))
     .pipe(dest(`${build}/css`));

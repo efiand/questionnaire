@@ -13,5 +13,5 @@ task(`build:copy`, () => src(source).pipe(changed(build)).pipe(dest(build)));
 task(`build`, (done) => {
   const prepare = parallel(`test`, `build:clean`, `temp`);
   const assets = parallel(`build:copy`, `css`, `js`, `img`, `img:sprite`);
-  return series(prepare, assets, `html`)(done);
+  return series(prepare, `img:icons`, assets, `html`)(done);
 });

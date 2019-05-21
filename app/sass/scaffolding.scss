@@ -12,10 +12,10 @@ html {
 }
 
 body {
-  max-width: 768px;
+  max-width: 776px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 62px 116px;
+  padding: 62px 112px;
   background-position: 0 -10px;
 
   @include background-image(background, jpg);
