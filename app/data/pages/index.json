@@ -50,6 +50,7 @@
                   "name": "field-group",
                   "params": {
                     "label": "Место жительства",
+                    "mixLabel": "field-group__label--location",
                     "field": {
                       "name": "field",
                       "params": {
