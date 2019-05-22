@@ -10,7 +10,6 @@
 CVS
 Thumbs.db
 __MACOS*/
-build/
 node_modules/
 npm-debug.*
 vscode/
