@@ -1,6 +1,12 @@
 <header class="header">
   {% for img in params.pictures %}
-    {{ picture(img) }}
+    {% if img.url %}
+      <a class="header__image-link" href="{{ img.url }}">
+        {{ picture(img) }}
+      </a>
+    {% else %}
+      {{ picture(img) }}
+    {% endif %}
   {% endfor %}
 
   <h1 class="visually-hidden">{{ pageTitle }}</h1>

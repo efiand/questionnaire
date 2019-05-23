@@ -1,0 +1,5 @@
+<label class="checker &--{{ params.type }}">
+  <input class="visually-hidden" name="{{ params.name }}" type="{{ params.type }}"
+    value="{{ params.value }}" {{ "checked" if params.checked }}>
+  <span class="&__label &__label--{{ params.type }}">{{ params.label }}</span>
+</label>

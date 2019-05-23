@@ -1,0 +1,15 @@
+<div class="ranger">
+  <label>
+    <input class="ranger__bar" name="{{ params.name }}" value="{{ params.value }}"
+    type="range" min="0" max="100">
+    <span class="visually-hidden">{{ params.label }}</span>
+  </label>
+
+  <div class="ranger__control"></div>
+
+  <ul class="ranger__vars">
+    {% for item in params.items %}
+      <li class="ranger__var">{{ item }}</li>
+    {% endfor %}
+  </ul>
+</div>

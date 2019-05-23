@@ -5,6 +5,9 @@
     "ptsans",
     "ptsans-bold"
   ],
+  "js": {
+    "MESSAGE_LINE_HEIGHT": 60
+  },
   "header": {
     "name": "header",
     "params": {

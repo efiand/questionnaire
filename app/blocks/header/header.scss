@@ -2,6 +2,11 @@
   position: relative;
 }
 
+.header__image-link {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .header__logo {
   display: block;
   margin: 0 0 40px;

@@ -5,62 +5,45 @@
       "name": "form",
       "params": {
         "method": "post",
+        "action": "https://echo.htmlacademy.ru",
         "groups": [
           {
             "name": "form-group",
             "params": {
+              "mix": "form-group--fields form-group--nearest",
               "heading": "Паспортные данные",
-              "headingHidden": true,
-              "fieldGroups": [
+              "headingMix": "visually-hidden",
+              "fields": [
                 {
-                  "name": "field-group",
+                  "name": "field",
                   "params": {
                     "label": "Полное ФИО",
-                    "mixLabel": "field-group__label--name",
-                    "field": {
-                      "name": "field",
-                      "params": {
-                        "mix": "field--name field-group__field",
-                        "type": "text ",
-                        "name": "name",
-                        "value": "Иванов Иван Иванович",
-                        "placeholder": "Иванов Иван Иванович"
-                      }
-                    }
+                    "type": "text ",
+                    "name": "name",
+                    "value": "Иванов Иван Иванович",
+                    "placeholder": "Иванов Иван Иванович",
+                    "required": true
                   }
                 },
                 {
-                  "name": "field-group",
+                  "name": "field",
                   "params": {
                     "label": "Год рождения",
-                    "mixLabel": "field-group__label--birthdate",
-                    "field": {
-                      "name": "field",
-                      "params": {
-                        "mix": "field--birthdate field-group__field",
-                        "type": "number",
-                        "name": "birthdate",
-                        "value": "1990",
-                        "placeholder": "1990"
-                      }
-                    }
+                    "type": "number",
+                    "name": "birthdate",
+                    "value": "1990",
+                    "placeholder": "1990"
                   }
                 },
                 {
-                  "name": "field-group",
+                  "name": "field",
                   "params": {
                     "label": "Место жительства",
-                    "mixLabel": "field-group__label--location",
-                    "field": {
-                      "name": "field",
-                      "params": {
-                        "mix": "field--location field-group__field",
-                        "type": "text",
-                        "name": "location",
-                        "value": "г. Иваново, Россия",
-                        "placeholder": "г. Иваново, Россия"
-                      }
-                    }
+                    "type": "text",
+                    "name": "location",
+                    "value": "г. Иваново, Россия",
+                    "placeholder": "г. Иваново, Россия",
+                    "required": true
                   }
                 }
               ]
@@ -70,34 +53,315 @@
             "name": "form-group",
             "params": {
               "heading": "Контакты",
-              "headingHidden": true,
-              "fieldGroups": [
+              "headingMix": "visually-hidden",
+              "fields": [
                 {
-                  "name": "field-group",
+                  "name": "field",
                   "params": {
                     "label": "Скайп",
-                    "field": {
-                      "name": "field",
-                      "params": {
-                        "type": "text",
-                        "name": "skype",
-                        "placeholder": "ivanov"
-                      }
-                    }
+                    "type": "text",
+                    "name": "skype",
+                    "placeholder": "ivanov"
                   }
                 },
                 {
-                  "name": "field-group",
+                  "name": "field",
                   "params": {
                     "label": "Почта",
-                    "field": {
-                      "name": "field",
-                      "params": {
-                        "type": "email",
-                        "name": "mail",
-                        "placeholder": "ivanov@gmail.com"
-                      }
-                    }
+                    "type": "email",
+                    "name": "mail",
+                    "placeholder": "ivanov@gmail.com",
+                    "required": true
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "form-group",
+            "params": {
+              "heading": "Расскажите о себе чекбоксами",
+              "description": "Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.",
+              "checkers": [
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "БЭМ/OOCSS",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "bem",
+                    "checked": true
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Pug (Jade)",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "pug",
+                    "checked": true
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Stylus/LESS/SASS",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "css-preprocessor",
+                    "checked": true
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Работаю с SVG",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "svg"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Верстаю семантично",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "semantic"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Accessibility (A11Y)",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "a11y"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "ES2015/ES2016",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "es6"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Gulp/GRUNT",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "task-runners"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Webpack",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "webpack"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Дружу с WebGL",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "webgl"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "jQuery",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "jquery"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Знаю/изучаю Angular",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "angular"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Знаю/изучаю React",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "react"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Знаю/изучаю Node.js",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "node"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Использую Git",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "git"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "С глазомером всё ок",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "eye-estimation"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Читаю <a href=\"https://blog.csssr.ru\">blog.csssr.ru</a>",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "blog"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Я ленивый(-ая)",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "lasy"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "У меня хороший английский",
+                    "type": "checkbox",
+                    "name": "properties",
+                    "value": "english"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "form-group",
+            "params": {
+              "heading": "Уровень владения JavaScript",
+              "mix": "form-group--ranger",
+              "ranger": {
+                "name": "ranger",
+                "params": {
+                  "name": "js",
+                  "label": "Шкала уровня владения в процентах",
+                  "value": 20,
+                  "items": [
+                    "Не владею",
+                    "Использую готовые решения",
+                    "Использую готовые решения и умею их переделывать",
+                    "Пишу сложный JS с нуля"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "name": "form-group",
+            "params": {
+              "heading": "Расскажите о себе словами",
+              "mix": "form-group--message",
+              "description": "Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.",
+              "fields": [
+                {
+                  "name": "field",
+                  "params": {
+                    "label": "Текст сообщения",
+                    "labelMix": "visually-hidden",
+                    "type": "textarea",
+                    "name": "message",
+                    "placeholder": "Ну-ууу-уу...\nЭэээ..."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "form-group",
+            "params": {
+              "heading": "Какие у вас планы на будущее?",
+              "mix": "form-group--radio",
+              "description": "Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.",
+              "checkers": [
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Верстать",
+                    "type": "radio",
+                    "name": "plans",
+                    "value": "layout",
+                    "checked": true
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Прокачиваться в JS",
+                    "type": "radio",
+                    "name": "plans",
+                    "value": "js"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Менеджерство",
+                    "type": "radio",
+                    "name": "plans",
+                    "value": "management"
+                  }
+                },
+                {
+                  "name": "checker",
+                  "params": {
+                    "label": "Другое",
+                    "type": "radio",
+                    "name": "plans",
+                    "value": "other"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "form-group",
+            "params": {
+              "heading": "Дополнительно",
+              "headingMix": "visually-hidden",
+              "fields": [
+                {
+                  "name": "field",
+                  "params": {
+                    "label": "Дата заполнения",
+                    "inputMix": "field__input--date",
+                    "type": "text",
+                    "name": "date",
+                    "placeholder": "01.01.2016"
                   }
                 }
               ]

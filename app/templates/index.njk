@@ -13,8 +13,7 @@
   {% endfor %}
 {% endmacro %}
 
-{% from "picture" | blockPath("macro") import pictureBase with context %}
-{% from "picture" | blockPath import picture with context %}
+{% from "picture" | blockPath("macro") import picture with context %}
 {% from "field" | blockPath("macro") import fieldBase with context %}
 
 {% block layout %}{% endblock %}

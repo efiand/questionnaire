@@ -4,7 +4,7 @@
 html {
   min-width: 320px;
   font-size: 15px;
-  line-height: 22px;
+  line-height: (23 / 15);
   font-family: "PT Sans", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
@@ -15,15 +15,14 @@ body {
   max-width: 776px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 62px 112px;
+  padding: 62px 112px 5px;
   background-position: 0 -10px;
 
   @include background-image(background, jpg);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: $color-link;
   text-decoration-skip-ink: none;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;

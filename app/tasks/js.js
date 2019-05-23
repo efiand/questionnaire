@@ -10,7 +10,10 @@ task(`ts`, async () => {
   const compile = await require(`rollup`).rollup({
     input: `${source}/js/script.ts`,
     plugins: [
-      require(`rollup-plugin-replace`)({ isDev }),
+      require(`rollup-plugin-replace`)({
+        isDev,
+        ...JSON.parse(require(`fs`).readFileSync(`${source}/data/project.json`)).js
+      }),
       require(`rollup-plugin-typescript`)(),
       require(`rollup-plugin-uglify`).uglify({
         output: { comments: false }

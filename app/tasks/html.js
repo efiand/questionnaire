@@ -36,11 +36,18 @@ task(`html:compile`, () => {
     .pipe(nunjucksRender({
       manageEnv: (env) => {
         env.opts.autoescape = false;
+
         env.addFilter(`bem`, (str, blockName) => {
           return str.replace(/&(\-\-|__)/g, `${blockName}$1`);
         });
+
         env.addFilter(`blockPath`, (blockName, macro = ``) => {
           return `${source}/blocks/${blockName}/${macro || blockName}.njk`;
+        });
+
+        env.addFilter(`editDict`, (dict, key, value) => {
+          dict[key] = value;
+          return dict;
         });
       }
     }))

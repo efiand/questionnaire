@@ -1,7 +1,0 @@
-{% macro picture(params) %}
-  {% if params.url %}
-    <a href="{{ params.url }}">{{ pictureBase(params) }}</a>
-  {% else %}
-    {{ pictureBase(params) }}
-  {% endif %}
-{% endmacro %}
