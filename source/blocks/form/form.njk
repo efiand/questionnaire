@@ -1,0 +1,4 @@
+<form class="form" method="{{ params.method }}"
+  {{ "action=\"" + params.action + "\"" if params.action }}>
+  {{ includes(params.groups) }}
+</form>

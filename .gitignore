@@ -11,7 +11,7 @@ CVS
 Thumbs.db
 __MACOS*/
 dist/
-temp/icons/
+temp/
 node_modules/
 npm-debug.*
 vscode/

@@ -1,0 +1,6 @@
+{% macro picture(params) %}
+  <picture class="picture {{ params.mix }}">
+    <source type="image/webp" srcset="img/{{ params.baseName }}.webp">
+    <img src="img/{{ params.baseName }}.{{ params.ext }}" alt="{{ params.alt }}">
+  </picture>
+{% endmacro %}

@@ -6,7 +6,7 @@
     "test": "gulp test",
     "bem:validate": "bem-validate dist/**/*.html"
   },
-  "source": "app",
+  "source": "source",
   "build": "dist",
   "temp": "temp",
   "dependencies": {},

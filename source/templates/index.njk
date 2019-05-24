@@ -1,0 +1,19 @@
+{# Подключение блоков #}
+{% macro include(block) %}
+  {% set params = block.params %}
+
+  {% filter bem(block.name) %}
+    {% include block.name | blockPath %}
+  {% endfilter %}
+{% endmacro %}
+
+{% macro includes(blocks) %}
+  {% for block in blocks %}
+    {{ include(block) }}
+  {% endfor %}
+{% endmacro %}
+
+{% from "picture" | blockPath("macro") import picture with context %}
+{% from "field" | blockPath("macro") import fieldBase with context %}
+
+{% block layout %}{% endblock %}

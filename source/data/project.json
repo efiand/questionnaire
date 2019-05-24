@@ -1,0 +1,24 @@
+{
+  "siteName": "CSSSR",
+  "titleDelimiter": " | ",
+  "fonts": [
+    "ptsans",
+    "ptsans-bold"
+  ],
+  "header": {
+    "name": "header",
+    "params": {
+      "logo": {
+        "mix": "header__logo",
+        "url": "https://csssr.com/ru",
+        "baseName": "logo-csssr",
+        "ext": "png",
+        "alt": "CSSSR"
+      },
+      "heading": "Анкета соискателя"
+    }
+  },
+  "js": {
+    "noDelete": true
+  }
+}

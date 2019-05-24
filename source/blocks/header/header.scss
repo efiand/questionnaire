@@ -1,0 +1,46 @@
+.header {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 252px;
+    height: 106px;
+    pointer-events: none;
+
+    @include background-image(stamp, png);
+
+    @media ($tablet) {
+      top: -14px;
+    }
+
+    @media ($desktop) {
+      right: -58px;
+    }
+  }
+}
+
+.header__logo-link {
+  display: inline-block;
+  margin: 0 0 40px;
+  vertical-align: top;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__heading {
+  width: 221px;
+  height: 118px;
+  margin: 0 auto 53px;
+  background-repeat: no-repeat;
+
+  @include background-image(blank-heading, png);
+
+  @media ($desktop) {
+    padding-right: 43px;
+  }
+}

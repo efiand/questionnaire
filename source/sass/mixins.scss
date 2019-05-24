@@ -1,0 +1,17 @@
+@mixin font-face ($family, $weight, $style, $url, $local, $local-alter) {
+  @font-face {
+    font-weight: $weight;
+    font-family: "#{$family}";
+    font-style: $style;
+    font-display: swap;
+    src: local("#{$local}"), local("#{$local-alter}"), url("../fonts/#{$url}.woff2") format("woff2"), url("../fonts/#{$url}.woff") format("woff");
+  }
+}
+
+@mixin background-image ($pict, $ext) {
+  background-image: url("../img/#{$pict}.#{$ext}");
+
+  @media ($webp) {
+    background-image: url("../img/#{$pict}.webp");
+  }
+}
