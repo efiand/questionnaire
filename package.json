@@ -9,14 +9,7 @@
   "source": "app",
   "build": "dist",
   "temp": "temp",
-  "vendors": [
-    "node_modules/picturefill/dist/picturefill.min.js",
-    "node_modules/svg4everybody/dist/svg4everybody.min.js"
-  ],
-  "dependencies": {
-    "picturefill": "^3.0.3",
-    "svg4everybody": "^2.1.9"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.8.0",
     "autoprefixer": "^9.5.0",
@@ -50,7 +43,6 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-w3c-html-validator": "^1.4.3",
     "gulp-webp": "^4.0.1",
-    "gulp.spritesmith": "^6.9.0",
     "htmlacademy-stylelint-config": "^0.0.1",
     "imagemin-jpegoptim": "^6.0.0",
     "postcss-csso": "^3.0.0",
