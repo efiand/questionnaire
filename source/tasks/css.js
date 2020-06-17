@@ -7,7 +7,6 @@ const {
   plumber,
   sourcemaps,
   sass,
-  combineMq,
   postcss,
   rename
 } = require(`gulp-load-plugins`)();
@@ -20,10 +19,10 @@ task(`css`, () => {
     .pipe(plumber())
     .pipe(gulpIf(isDev, sourcemaps.init()))
     .pipe(sass())
-    .pipe(combineMq())
     .pipe(postcss([
+      require(`mqpacker`),
       require(`autoprefixer`)(),
-      require(`postcss-csso`)({ comments: false })
+      require(`cssnano`)()
     ]))
     .pipe(cssBase64(base64))
     .pipe(rename({ suffix: `.min` }))

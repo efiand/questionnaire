@@ -4,6 +4,6 @@
   {% if params.type !== "textarea" %}
     <input class="&__input {{ params.inputMix }}" type="{{ params.type }}" value="{{ params.value }}" {{ fieldBase(params) }}>
   {% else %}
-    <textarea class="&__input &__input--message" {{ fieldBase(params) }}>{{ params.value }}</textarea>
+    <textarea class="&__input &__input--message" {{ fieldBase(params) }} spellcheck="false">{{ params.value }}</textarea>
   {% endif %}
 </label>
