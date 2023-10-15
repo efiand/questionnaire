@@ -1,0 +1,69 @@
+@use "../env" as *;
+
+:root {
+	--background: url("../../icons/background.webp");
+	--blank-heading: url("../../icons/blank-heading.webp");
+	--checkbox-base: url("../../icons/checkbox-base.webp");
+	--checkbox-on: url("../../icons/checkbox-on.webp");
+	--line: url("../../icons/line.webp");
+	--radio-base: url("../../icons/radio-base.webp");
+	--radio-on: url("../../icons/radio-on.webp");
+	--range-control: url("../../icons/range-control.webp");
+	--stamp: url("../../icons/stamp.webp");
+}
+
+html {
+	min-width: 320px;
+	overflow-x: hidden;
+	font-size: 15px; // rem support
+	line-height: calc(23 / 15);
+}
+
+body {
+	max-width: 776px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 40px 20px 5px;
+	font-family: "PT Sans", sans-serif;
+	background-color: $colors-back;
+	background-image: var(--background);
+	background-position: 0 -10px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: transparent;
+	scroll-behavior: smooth;
+	overflow-anchor: none;
+
+	@include media-tablet-desktop {
+		padding: 62px 40px 5px;
+	}
+
+	@include media-desktop {
+		padding: 62px 112px 5px;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration-skip-ink: none;
+	color: $colors-link;
+	transition: $transitions-default;
+	transition-property: color, opacity, background-color, border-color,
+		box-shadow;
+}
+
+button,
+[role="button"] {
+	cursor: pointer;
+	user-select: none;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}

@@ -1,0 +1,15 @@
+@mixin font-face($family, $alias, $weights: 400, $styles: normal) {
+	@each $style in $styles {
+		@each $weight in $weights {
+			@font-face {
+				font-weight: $weight;
+				font-family: $family;
+				font-style: $style;
+				font-display: swap;
+				src: url("/fonts/#{$alias}-#{$style}-#{$weight}.woff2") format("woff2");
+			}
+		}
+	}
+}
+
+@include font-face("PT Sans", "ptsans", (400, 700));
